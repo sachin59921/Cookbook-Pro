@@ -1,0 +1,475 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: #1c140d;
+    text-decoration: none;
+    text-align: center;
+}
+
+.hidden {
+    top: -1000px;
+    opacity: 0;
+    position: fixed;
+    z-index: -1;
+}
+
+.hidden div,
+.hidden ul,
+.hidden li,
+.hidden a,
+.hidden img,
+.hidden h2,
+.hidden h3,
+.hidden input {
+    display: inline-block;
+    z-index: -10;
+}
+
+.hidden.quick-alert {
+    z-index: -1;
+}
+
+.hidden .form-inside,
+.hidden .alert-inside {
+    position: inline-block;
+    margin-top: 8%;
+}
+
+.box {
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 2px 2px 2px #c3c3c3;
+}
+
+.btn {
+    background-color:#ffa90d;
+    border: 0;
+    border-radius: 0.5em;
+    color: #f2e9e1;
+    cursor: pointer;
+    font-size: 0.6em;
+    letter-spacing: 0.1em;
+    padding: 1% 1.5%;
+    z-index: 1000;
+}
+
+.btn:hover {
+    background-color: #000000;
+}
+
+.btn.close {
+    background-color: transparent;
+    color: #ffa90d;
+    font-size: 1.1em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    align-items: center;
+    background-color: #4eb60a;
+    color: #f2e9e1;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.8em;
+    font-weight: 300;
+    justify-content: space-between;
+    letter-spacing: 0.1em;
+    padding: 2%;
+    box-shadow: 0px 2px 2px #c3c3c3;
+}
+
+.header .head-title {
+    margin: 0 0.5em;
+}
+
+@media only screen and (max-width: 480px) {
+    .header .head-title {
+        display: none;
+    }
+}
+
+.header .btn-container {
+    text-align: right;
+    width: 50%;
+}
+
+.header .btn-container .btn {
+    display: inline-block;
+    margin-right: 1em;
+    padding: 2%;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 480px) {
+    .header .btn-container .btn {
+        border-radius: 0.2em;
+    }
+}
+
+.header .btn-container .btn:last-child {
+    margin-right: 0;
+}
+
+.title {
+    text-transform: uppercase;
+    padding: 20px;
+    text-align: center;
+}
+
+.nameList {
+    margin-left: 1em;
+    opacity: 1;
+    padding: 2%;
+}
+
+.nameList .nameLink {
+    background-color: #cbe86b;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 1%;
+    opacity: inherit;
+    padding: 1%;
+}
+
+.nameList .nameLink:hover {
+    background-color: #4b5800;
+}
+
+.recipe-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 1%;
+}
+
+.recipe-container .recipe {
+    padding: 1.5em;
+    margin: 0.8em 0.5em;
+}
+
+.fullsize-recipe-container>li {
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 2px 2px 2px #c3c3c3;
+    display: flex;
+    cursor: auto;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin: 2% auto;
+    padding: 3%;
+    width: 90%;
+    z-index: 21;
+    transition: all 0.5s ease;
+}
+
+@media only screen and (max-width: 480px) {
+    .fullsize-recipe-container>li {
+        flex-wrap: wrap;
+    }
+}
+
+.fullsize-recipe-container .pic-full {
+    margin: 0 auto;
+    min-width: 300px;
+    width: 48%;
+}
+
+@media only screen and (max-width: 480px) {
+    .fullsize-recipe-container .pic-full {
+        margin-top: 1em;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .fullsize-recipe-container .pic-full {
+        min-width: 0;
+        width: 300px;
+    }
+}
+
+.fullsize-recipe-container .pic-full img {
+    max-width: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 320px) {
+    .fullsize-recipe-container .pic-full img {
+        max-width: 280px;
+    }
+}
+
+.fullsize-recipe-container .details-full {
+    margin: 0 auto;
+    min-width: 300px;
+    width: 48%;
+}
+
+@media only screen and (max-width: 320px) {
+    .fullsize-recipe-container .details-full {
+        min-width: 0;
+        width: 300px;
+    }
+}
+
+.fullsize-recipe-container .details-full .title-full {
+    margin-top: 1em;
+}
+
+.fullsize-recipe-container .details-full .close {
+    font-weight: 400;
+    padding: 0;
+    position: absolute;
+    max-width: 2em;
+    right: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+    .fullsize-recipe-container .details-full .close {
+        right: 15px;
+    }
+}
+
+.fullsize-recipe-container .edit-details-full {
+    margin: 0 auto;
+    min-width: 300px;
+    padding: 0 1em;
+    width: 60%;
+}
+
+@media only screen and (max-width: 320px) {
+    .fullsize-recipe-container .edit-details-full {
+        min-width: 0;
+        width: 300px;
+    }
+}
+
+.fullsize-recipe-container .edit-details-full .form-div {
+    width: 100%;
+}
+
+.fullsize-recipe-container .edit-details-full .title-full {
+    margin-top: 1em;
+    width: 100%;
+}
+
+.fullsize-recipe-container .edit-details-full .new-inputs {
+    margin-left: 1.5em;
+    width: 100%;
+}
+
+@media only screen and (max-width: 480px) {
+    .fullsize-recipe-container .edit-details-full .new-inputs {
+        margin-left: 0;
+    }
+}
+
+.fullsize-recipe-container .edit-details-full .close {
+    font-weight: 400;
+    padding: 0;
+    position: absolute;
+    max-width: 2em;
+    right: 50px;
+}
+
+@media only screen and (max-width: 480px) {
+    .fullsize-recipe-container .edit-details-full .close {
+        right: 15px;
+    }
+}
+
+.fullsize-recipe-container .edit-details-full label {
+    display: inline-block;
+    letter-spacing: 0.1em;
+    margin-top: 0.7em;
+}
+
+.fullsize-recipe-container .edit-details-full input {
+    font-size: 1em;
+    margin: 0.5em;
+    padding: 1%;
+    width: 90%;
+}
+
+.fullsize-recipe-container .title-full {
+    color: #626900;
+    font-size: 2em;
+    margin-bottom: 0.7em;
+}
+
+.fullsize-recipe-container .link.btn {
+    display: inline-block;
+    font-size: 1em;
+    padding: 2%;
+}
+
+.fullsize-recipe-container .link-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0.5em;
+    padding: 0;
+    width: 100%;
+}
+
+.fullsize-recipe-container .link-row .btn {
+    display: inline-block;
+    flex-grow: 1;
+    font-size: 1em;
+    line-height: 1.5em;
+    margin: 0;
+    margin-right: 0.5em;
+    padding: 2%;
+}
+
+@media only screen and (max-width: 320px) {
+    .fullsize-recipe-container .link-row .btn {
+        padding: 1%;
+    }
+}
+
+.fullsize-recipe-container .link-row .btn:last-child {
+    margin: 0;
+}
+
+.fullsize-recipe-container .ingredients-full {
+    background-color: #e6f4b0;
+    font-size: 1.1em;
+    padding: 4%;
+}
+
+.fullsize-recipe-container .ingredients-full h3 {
+    font-size: 1.2em;
+    letter-spacing: 0.1em;
+    margin-bottom: 0.5em;
+}
+
+.fullsize-recipe-container .ingredients-full ul {
+}
+
+.fullsize-recipe-container .ingredients-full li {
+    list-style-type: circle;
+    margin-bottom: 0.4em;
+    margin-left: 1.5em;
+}
+
+.fullsize-recipe-container .ingredients-full li:last-child {
+    margin-bottom: 0;
+}
+
+.recipe {
+    background-color: #ffffff;
+    border: 1px solid #cdcdcd;
+    box-shadow: 2px 2px 2px #c3c3c3;
+    cursor: pointer;
+    height: auto;
+    width: 15em;
+    z-index: 20;
+}
+
+.recipe img {
+    width: 100%;
+}
+
+.recipe .title {
+    margin: 1em 0 0 0;
+}
+
+.add-form {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1050;
+    transition: opacity 0.5s ease;
+}
+
+.add-form.hidden {
+    z-index: -1;
+    transition: all 0s ease;
+}
+
+.add-form .form-inside {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 0.5em;
+    display: inline-block;
+    height: 14em;
+    margin: 5% auto;
+    padding: 2%;
+    position: relative;
+    width: 400px;
+    transition: margin 0.5s linear;
+}
+
+.add-form .form-inside input {
+    margin: 1%;
+    padding: 1%;
+    width: 96%;
+}
+
+.add-form .form-inside .btn {
+    color: #f2e9e1;
+    font-size: 1em;
+    margin-top: 13%;
+    margin-left: 75%;
+    text-align: center;
+    width: 24%;
+}
+
+.add-form .form-inside h2 {
+    font-size: 1.3em;
+    font-weight: 300;
+    letter-spacing: 0.1em;
+    margin-bottom: 5%;
+}
+
+.add-form .form-inside h2 div {
+    display: inline-block;
+    width: 95%;
+}
+
+.add-form .form-inside h2 .close {
+    color: #4b5800;
+    margin: 0;
+    text-align: center;
+    width: 0.8em;
+}
+
+.quick-alert {
+    background-color: rgba(0, 0, 0, 0.25);
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1051;
+    transition: all 0.5s ease;
+}
+
+.quick-alert .alert-inside {
+    background-color: #ffffff;
+    border-radius: 0.5em;
+    display: inline-block;
+    font-size: 1.1em;
+    height: 1em;
+    margin: 5% auto;
+    padding: 3%;
+    position: relative;
+    text-align: center;
+    width: 30%;
+    transition: margin 1s linear;
+}
+
+@media only screen and (max-width: 480px) {
+    .quick-alert .alert-inside {
+        width: 60%;
+    }
+}

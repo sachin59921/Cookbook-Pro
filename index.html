@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookbook Pro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="head-title">Cookbook Pro</div>
+        <div class="btn-container">
+            <button class="btn" id="addRecipeBtn">Add Recipe</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="title">Recipes</div>
+        <div class="recipe-container" id="recipeContainer">
+            <!-- Recipes will be dynamically added here -->
+        </div>
+    </main>
+
+    <!-- Add Recipe Form -->
+    <div class="add-form hidden" id="addForm">
+        <div class="form-inside">
+            <h2>Add Recipe <span class="close" id="closeAddForm">&times;</span></h2>
+            <input type="text" id="recipeName" placeholder="Recipe Name">
+            <input type="text" id="recipeIngredients" placeholder="Ingredients">
+            <button class="btn" id="submitRecipe">Add Recipe</button>
+        </div>
+    </div>
+
+    <!-- Quick Alert -->
+    <div class="quick-alert hidden" id="quickAlert">
+        <div class="alert-inside">
+            <p id="alertMessage"></p>
+            <span class="close" id="closeAlert">&times;</span>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
